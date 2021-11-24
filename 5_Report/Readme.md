@@ -2262,3 +2262,23 @@ Inc
 void show_record(); void reset_score(); void help(); void edit_score(float , char []); void mainhome(); void home(); void test(); void game(); void score();
 
 #endif
+Test plan
+High Level Test Plan
+Test_Id	Desciption	Expected_Input	Expected_output	Actual_Output	Type_of_Test
+HP01	User Interface	Character Y	Enter The Answer	Pass	Requrirement
+Low Level Test Plan
+Test_Id	Desciption	Expected_Input	Expected_output	Actual_Output	Type_of_Test
+LP01	User View all the rules of the game	Character Y	View Rules and Exits	Pass	Requrirement
+LP02	user has an option to exit	Character N	Exits	Pass	Requrirement
+LP03	User Can View the score	Character Y	Open Results	Pass	Requrirement
+MAKEFILE
+
+PROJ_NAME = QUIZ_GAME SRC = main.c functions.c mainhome.c home.c game.c
+
+ifdef OS RM = del /q FixPath = $(subst /,,$1) EXEC = exe else ifeq ($(shell uname), Linux) RM = rm -rf FixPath = $1 EXEC = out endif endif
+
+all: gcc $(SRC) -o $(call FixPath,$(PROJ_NAME).$(EXEC))
+
+run: all ./$(call FixPath,$(PROJ_NAME).$(EXEC))
+
+clean: $(RM) $(call FixPath,$(PROJ_NAME).$(EXEC))
