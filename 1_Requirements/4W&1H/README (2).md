@@ -3,7 +3,7 @@
 
 
 ## 4W's and 1H
- W's and 1 H
+ 4 W's and 1 H
 
 Who : Every person with electronic devices need games nowadays for refreshment and relaxing. So, anyone can play this game.
 
